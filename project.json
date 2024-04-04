@@ -1,0 +1,24 @@
+{
+  "name": "barbu-api",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "barbu-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "barbu-api:build:development"
+        },
+        "production": {
+          "buildTarget": "barbu-api:build:production"
+        }
+      }
+    }
+  }
+}
